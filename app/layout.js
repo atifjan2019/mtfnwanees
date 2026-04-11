@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
           `
         }} />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {children}
       </body>
     </html>
