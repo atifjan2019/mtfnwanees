@@ -46,9 +46,17 @@ export default async function HomePage({ searchParams }) {
      const formattedKwd = formatKeyword(params.kwd);
      const lowerKwd = params.kwd.replace(/[-_]+/g, ' ').toLowerCase();
      
+     // Preserve Step Section Headings
+     html = html.split('Mobile Tyre Fitting - We Come to You').join('__PRESERVE_1__');
+     html = html.split('<h4 class="text-22 highlight-text text-uppercase">Mobile Tyre Fitting</h4>').join('__PRESERVE_2__');
+     
      html = html.split('Mobile Tyre Fitting').join(formattedKwd);
      html = html.split('Mobile tyre fitting').join(formattedKwd);
      html = html.split('mobile tyre fitting').join(lowerKwd);
+
+     // Restore Preserved Sections
+     html = html.split('__PRESERVE_1__').join('Mobile Tyre Fitting - We Come to You');
+     html = html.split('__PRESERVE_2__').join('<h4 class="text-22 highlight-text text-uppercase">Mobile Tyre Fitting</h4>');
   }
   
   if (params?.loc) {
