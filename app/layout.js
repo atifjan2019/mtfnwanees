@@ -21,9 +21,8 @@ export default function RootLayout({ children }) {
 
         <link rel="canonical" href="http://127.0.0.1:3000" />
         
-        {/* Preload hero images for LCP */}
-        <link rel="preload" as="image" href="/assets/imgs/optimized/mtf-420.webp" media="(max-width: 767px)" />
-        <link rel="preload" as="image" href="/assets/imgs/optimized/mtf-700.webp" media="(min-width: 768px)" />
+        {/* Preload hero image for LCP */}
+        <link rel="preload" as="image" href="https://uploads.webspires.co.uk/mtfnwanees/a.png" />
 
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
