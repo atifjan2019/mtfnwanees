@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "Mobile Tyre Fitting United Kingdom | 24/7 Emergency Service | Call Now",
@@ -19,6 +20,10 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
         <link rel="canonical" href="http://127.0.0.1:3000" />
+        
+        {/* Preload hero images for LCP */}
+        <link rel="preload" as="image" href="/assets/imgs/optimized/mtf-420.webp" media="(max-width: 767px)" />
+        <link rel="preload" as="image" href="/assets/imgs/optimized/mtf-700.webp" media="(min-width: 768px)" />
 
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
@@ -35,8 +40,9 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         />
         <link
-          rel="stylesheet"
+          rel="preload" as="style"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          onLoad="this.onload=null;this.rel='stylesheet'"
         />
         <link
           rel="stylesheet"
@@ -44,19 +50,22 @@ export default function RootLayout({ children }) {
         />
         <link rel="stylesheet" href="/assets/css/style.css" />
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-11284691642');
-            `,
-          }}
-        />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" 
+          strategy="lazyOnload" 
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-11284691642');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
