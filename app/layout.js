@@ -40,9 +40,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         />
         <link
-          rel="preload" as="style"
+          rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-          onLoad="this.onload=null;this.rel='stylesheet'"
+          media="print"
+          onLoad={(e) => { e.target.media = "all"; }}
         />
         <link
           rel="stylesheet"
