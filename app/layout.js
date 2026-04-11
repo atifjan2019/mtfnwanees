@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-11284691642');
+            gtag('config', 'AW-7570768229');
 
             window.gtag_report_conversion = function(url) {
               var callback = function () {
