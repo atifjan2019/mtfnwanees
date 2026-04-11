@@ -384,9 +384,8 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
                       <div className="col-md-6">
                           <div className="choose-img">
                               <div className="img-wrap">
-                                  <img src="/assets/imgs/optimized/why-1000.webp"
-                                      srcSet="/assets/imgs/optimized/why-700.webp 700w, /assets/imgs/optimized/why-1000.webp 1000w"
-                                      sizes="(max-width: 767px) 100vw, 50vw" width="1000" height="1092"
+                                  <img src="https://uploads.webspires.co.uk/mtfnwanees/mtf.webp"
+                                      width="1000" height="1092"
                                       alt="Why choose our mobile tyre fitting service - professional technician with van"
                                       loading="lazy" decoding="async" />
                               </div>
