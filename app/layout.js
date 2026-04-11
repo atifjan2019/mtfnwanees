@@ -61,6 +61,21 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-11284691642');
+
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-11284691642/uX3CCOWCg5ocELr1-oQq',
+                  'value': 1.0,
+                  'currency': 'GBP',
+                  'event_callback': callback
+              });
+              return false;
+            }
           `}
         </Script>
       </body>
