@@ -47,13 +47,9 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
         />
         <link rel="stylesheet" href="/assets/css/style.css" />
-
-      </head>
-      <body>
-        {children}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -73,8 +69,11 @@ export default function RootLayout({ children }) {
               });
               return false;
             };
-          `}
-        </Script>
+          `
+        }} />
+      </head>
+      <body>
+        {children}
       </body>
     </html>
   );
