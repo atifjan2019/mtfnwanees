@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
                 }
               };
               gtag('event', 'conversion', {
-                  'send_to': 'AW-11284691642/IcCCCNFq8cMZELr1-oQq',
+                  'send_to': 'AW-11284691642/IcCCCNFQ8cMZELr1-oQq',
                   'value': 1.0,
                   'currency': 'GBP',
                   'event_callback': callback
