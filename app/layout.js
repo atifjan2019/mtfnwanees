@@ -52,17 +52,15 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <Script 
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" 
-          strategy="lazyOnload" 
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-11284691642');
 
-            function gtag_report_conversion(url) {
+            window.gtag_report_conversion = function(url) {
               var callback = function () {
                 if (typeof(url) != 'undefined') {
                   window.location = url;
@@ -75,7 +73,7 @@ export default function RootLayout({ children }) {
                   'event_callback': callback
               });
               return false;
-            }
+            };
           `}
         </Script>
       </body>
