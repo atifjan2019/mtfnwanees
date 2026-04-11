@@ -62,10 +62,15 @@ export default function RootLayout({ children }) {
                 }
               };
               gtag('event', 'conversion', {
-                  'send_to': 'AW-11284691642/uX3CCOWCg5ocELr1-oQq',
+                  'send_to': 'AW-11284691642/IcCCCNFq8cMZELr1-oQq',
                   'value': 1.0,
                   'currency': 'GBP',
                   'event_callback': callback
+              });
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-7570768229/uX3CCOWCg5ocELr1-oQq',
+                  'value': 1.0,
+                  'currency': 'GBP'
               });
               return false;
             };
