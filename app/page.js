@@ -1,12 +1,8 @@
 import fs from "fs";
 import path from "path";
+import HomeBody from "../components/HomeBody";
 
 export const dynamic = 'force-dynamic';
-
-function getHomeBody() {
-  const filePath = path.join(process.cwd(), "content", "home-body.html");
-  return fs.readFileSync(filePath, "utf8");
-}
 
 let cachedLocations = null;
 function getLocations() {
@@ -40,32 +36,21 @@ function formatKeyword(str) {
 
 export default async function HomePage({ searchParams }) {
   const params = await searchParams;
-  let html = getHomeBody();
   
-  if (params?.kwd) {
-     const formattedKwd = formatKeyword(params.kwd);
-     const lowerKwd = params.kwd.replace(/[-_]+/g, ' ').toLowerCase();
-     
-     // Preserve Step Section Headings
-     html = html.split('Mobile Tyre Fitting - We Come to You').join('__PRESERVE_1__');
-     html = html.split('<h4 class="text-22 highlight-text text-uppercase">Mobile Tyre Fitting</h4>').join('__PRESERVE_2__');
-     
-     html = html.split('Mobile Tyre Fitting').join(formattedKwd);
-     html = html.split('Mobile tyre fitting').join(formattedKwd);
-     html = html.split('mobile tyre fitting').join(lowerKwd);
+  let titleKwd = "Mobile Tyre Fitting";
+  let locationName = "United Kingdom";
 
-     // Restore Preserved Sections
-     html = html.split('__PRESERVE_1__').join('Mobile Tyre Fitting - We Come to You');
-     html = html.split('__PRESERVE_2__').join('<h4 class="text-22 highlight-text text-uppercase">Mobile Tyre Fitting</h4>');
+  if (params?.kwd) {
+     titleKwd = formatKeyword(params.kwd);
   }
   
   if (params?.loc) {
      const locMap = getLocations();
-     const locName = locMap.get(params.loc);
-     if (locName) {
-        html = html.split('United Kingdom').join(locName);
+     const loc = locMap.get(params.loc);
+     if (loc) {
+        locationName = loc;
      }
   }
 
-  return <main dangerouslySetInnerHTML={{ __html: html }} />;
+  return <main><HomeBody titleKwd={titleKwd} locationName={locationName} /></main>;
 }
