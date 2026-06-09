@@ -35,7 +35,7 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
                       <div className="icon">
                           <i className="fa-solid fa-phone"></i>
                       </div>
-                      <p className="m-0 text-22 pnum">+44 7576 536780</p>
+                      <p className="m-0 text-22 pnum">0757 653 6780</p>
                       <small className="text-14">24/7 Service - Call Now</small>
                   </a>
                   <p className="text-16 mb-0 para">ETA From 20 mins in {locationName}</p>
@@ -105,7 +105,7 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
 
                       <div className="mt-4 pt-2">
                           <a id="callnow" onClick={(e) => handleCall(e, 'tel:+447576536780')} href="tel:+447576536780" className="btn-link mx-auto mx-md-0">
-                              <p className="m-0 text-22 pnum">+44 7576 536780</p>
+                              <p className="m-0 text-22 pnum">0757 653 6780</p>
                               <small className="text-14">24/7 Service - Call Now</small>
                           </a>
                       </div>
@@ -175,7 +175,7 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
 
                   <div className="mt-4 pt-2">
                       <a id="callnow" onClick={(e) => handleCall(e, 'tel:+447576536780')} href="tel:+447576536780" className="btn-link mx-auto">
-                          <p className="m-0 text-22 pnum">+44 7576 536780</p>
+                          <p className="m-0 text-22 pnum">0757 653 6780</p>
                           <small className="text-14">24/7 Service - Call Now</small>
                       </a>
                       <p className="text-16 text-center mb-0">ETA - From 20 mins in {locationName}</p>
@@ -192,7 +192,7 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
 
                   <div className="mt-4 pt-2">
                       <a id="callnow" onClick={(e) => handleCall(e, 'tel:+447576536780')} href="tel:+447576536780" className="btn-link mx-auto">
-                          <p className="m-0 text-22 pnum">+44 7576 536780</p>
+                          <p className="m-0 text-22 pnum">0757 653 6780</p>
                           <small className="text-14">24/7 Service - Call Now</small>
                       </a>
                       <p className="text-16 text-center mb-0 text-white">ETA - From 20 mins in {locationName}</p>
@@ -434,7 +434,7 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
 
                           <div className="mt-4 pt-2">
                               <a id="callnow" onClick={(e) => handleCall(e, 'tel:+447576536780')} href="tel:+447576536780" className="btn-link mx-auto">
-                                  <p className="m-0 text-22 pnum">+44 7576 536780</p>
+                                  <p className="m-0 text-22 pnum">0757 653 6780</p>
                                   <small className="text-14">24/7 Service - Call Now</small>
                               </a>
                               <p className="text-16 text-center mb-0">ETA - From 20 mins in {locationName}</p>
