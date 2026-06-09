@@ -100,8 +100,8 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-22 blue-text">10. Contact Us</h2>
         <p className="text-16">
           If you have any questions about this Privacy Policy, please contact us at{" "}
-          <a href="tel:03300438437" className="highlight-text" style={{ textDecoration: "none" }}>
-            0330 043 8437
+          <a href="tel:+447576536780" className="highlight-text" style={{ textDecoration: "none" }}>
+            +44 7576 536780
           </a>.
         </p>
       </section>

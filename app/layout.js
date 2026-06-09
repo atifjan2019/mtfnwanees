@@ -4,7 +4,7 @@ import Script from "next/script";
 export const metadata = {
   title: "Mobile Tyre Fitting United Kingdom | 24/7 Emergency Service | Call Now",
   description:
-    "24/7 Mobile Tyre Fitting in United Kingdom & outskirts. Emergency roadside assistance, ETA from 20 mins. Brand new tyres, TPMS & puncture repair. Call 0330 043 8437 now.",
+    "24/7 Mobile Tyre Fitting in United Kingdom & outskirts. Emergency roadside assistance, ETA from 20 mins. Brand new tyres, TPMS & puncture repair. Call +44 7576 536780 now.",
 };
 
 export default function RootLayout({ children }) {
