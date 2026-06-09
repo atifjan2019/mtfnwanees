@@ -18,7 +18,7 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
   return (
     <>
       <div id="wa" className="d-flex align-items-center gap-2">
-          <a href="https://api.whatsapp.com/send?phone=+447576536780&text=Need+Help%3F" className="whatsapp-button"
+          <a href="https://api.whatsapp.com/send?phone=+447722127759&text=Need+Help%3F" className="whatsapp-button"
               target="_blank" aria-label="Chat on WhatsApp">
               <h5>Need Help?</h5>
 

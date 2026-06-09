@@ -54,7 +54,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
         />
         <link rel="stylesheet" href="/assets/css/style.css" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11284691642" />        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18225923845" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18225923845');
+          `
+        }} />        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18225923845" />
         <script dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -62,6 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('js', new Date());
             gtag('config', 'AW-11284691642');
             gtag('config', 'AW-7570768229');
+            gtag('config', 'AW-18225923845');
 
             window.gtag_report_conversion = function(url) {
               var callback = function () {
