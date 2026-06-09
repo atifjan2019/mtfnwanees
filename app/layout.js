@@ -29,7 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="canonical" href="https://www.mobiletyrestoday.uk/" />
         
         {/* Preload hero image for LCP */}
-        <link rel="preload" as="image" href="https://uploads.webspires.co.uk/mtfnwanees/a.png" />
+        <link rel="preload" as="image" href="/1.webp" />
 
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
