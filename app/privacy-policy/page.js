@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
         <p className="text-16">
           If you have any questions about this Privacy Policy, please contact us at{" "}
           <a href="tel:+447576536780" className="highlight-text" style={{ textDecoration: "none" }}>
-            +44 7576 536780
+            0757 653 6780
           </a>.
         </p>
       </section>
