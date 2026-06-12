@@ -15,10 +15,29 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
     }
   };
 
+    const handleWhatsAppClick = (e, whatsappUrl) => {
+        e.preventDefault();
+
+        const openWhatsApp = () => {
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        };
+
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            window.gtag('event', 'conversion', {
+                send_to: 'AW-18225923845/thGpCLOl_70cEIWO5vJD',
+                event_callback: openWhatsApp,
+            });
+            return;
+        }
+
+        openWhatsApp();
+    };
+
   return (
     <>
       <div id="wa" className="d-flex align-items-center gap-2">
           <a href="https://api.whatsapp.com/send?phone=+447722127759&text=Need+Help%3F" className="whatsapp-button"
+              onClick={(e) => handleWhatsAppClick(e, 'https://api.whatsapp.com/send?phone=+447722127759&text=Need+Help%3F')}
               target="_blank" aria-label="Chat on WhatsApp">
               <h5>Need Help?</h5>
 
