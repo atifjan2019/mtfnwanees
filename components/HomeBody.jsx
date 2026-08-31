@@ -592,40 +592,7 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
               })}
           </Script>
 
-          <Script id="smartlook-init" strategy="lazyOnload">
-            {`
-              window.addEventListener('load', function () {
-                  var bootSmartlook = function () {
-                      window.smartlook || (function (d) {
-                          var o = smartlook = function () {
-                              o.api.push(arguments);
-                          },
-                              h = d.getElementsByTagName('head')[0],
-                              c = d.createElement('script');
-
-                          o.api = [];
-                          c.async = true;
-                          c.type = 'text/javascript';
-                          c.charset = 'utf-8';
-                          c.src = 'https://web-sdk.smartlook.com/recorder.js';
-                          h.appendChild(c);
-                      })(document);
-
-                      smartlook('init', '43adb320c41f63674d5523146230b9b5c319c691', {
-                          region: 'eu'
-                      });
-                  };
-
-                  if ('requestIdleCallback' in window) {
-                      requestIdleCallback(bootSmartlook);
-                      return;
-                  }
-
-                  setTimeout(bootSmartlook, 1500);
-              });
-            `}
-          </Script>
-
+    
           <div className="footer-section">
               <div className="ft-content text-center">
 

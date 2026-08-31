@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
     c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
     })(document);
-    smartlook('init', '38c3083b447a3990719c9182136d13426030e99c', { region: 'eu' });`,
+    smartlook('init', 'aca46ea591b1492fb9ded798a83c9344adb140ee', { region: 'eu' });`,
           }}
         />
         <meta charSet="UTF-8" />
@@ -111,16 +111,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             };
           `
         }} />
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.smartlook||(function(d) {
-              var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-              var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-              c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
-            })(document);
-            smartlook('init', '10978ec4f57b8dee61bf8e1b04463ba3f0e0616d', { region: 'eu' });
-          `
-        }} />
+        {/* Smartlook is initialised ONCE, in the loader above. The recorder's
+            own `window.smartlook ||` guard means only the first init on a page
+            takes effect, so a second one records nothing while looking as
+            though it does. */}
       </head>
       <body suppressHydrationWarning>
         <noscript>
