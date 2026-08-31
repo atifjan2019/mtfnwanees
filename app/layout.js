@@ -11,13 +11,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script id="gtm-init" strategy="beforeInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W92CLXTF');`}
-        </Script>
+        {/* GTM container GTM-W92CLXTF removed 2026-08-31.
+            It belonged to the retired "Mobile Tyres Today" property
+            (mobiletyrestoday.uk, now a 404) and contributed nothing this page
+            does not already do itself: its base tag was AW-11284691642, which
+            is configured directly below, and its call-conversion tag tried to
+            swap "0330 043 8437" — a number that does not appear on this site.
+            Its only unique effect was loading a third Google Ads account's tag,
+            adding this site's visitors to another account's audiences. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `window.smartlook||(function(d) {
@@ -117,14 +118,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             though it does. */}
       </head>
       <body suppressHydrationWarning>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-W92CLXTF"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
         {children}
       </body>
     </html>
