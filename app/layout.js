@@ -26,7 +26,15 @@ export default function RootLayout({ children }) {
     var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
     c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
     })(document);
-    smartlook('init', 'aca46ea591b1492fb9ded798a83c9344adb140ee', { region: 'eu' });`,
+    smartlook('init', 'aca46ea591b1492fb9ded798a83c9344adb140ee', { region: 'eu' });
+    // Smartlook is privacy-first: on-page NUMBERS are replaced with asterisks
+    // unless explicitly enabled, which is why recordings showed the call button
+    // as "**** *** ****". No CSS class overrides this -- it is an SDK call.
+    // Enabled because the whole point of these recordings is to see which phone
+    // number a real ad visitor is shown, i.e. whether Google's call-tracking
+    // number swap is reaching them. Form inputs and emails stay OFF, so no
+    // visitor-entered data is captured -- only text already public on the page.
+    smartlook('record', { numbers: true });`,
           }}
         />
         <meta charSet="UTF-8" />
