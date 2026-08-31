@@ -8,10 +8,18 @@ export default function HomeBody({ titleKwd = "Mobile Tyre Fitting", locationNam
 
   const handleCall = (e, telUrl) => {
     e.preventDefault();
+    // Google Ads call reporting swaps the displayed number for a forwarding
+    // number and rewrites this anchor's href at runtime. Read the href at click
+    // time instead of trusting the build-time literal: preventDefault() discards
+    // the anchor's own navigation, so the literal would show the visitor the
+    // forwarding number while dialling the original — and Google would record no
+    // call at all, silently reporting zero conversions from a working page.
+    const dialUrl =
+      (e.currentTarget && e.currentTarget.getAttribute('href')) || telUrl;
     if (typeof window !== 'undefined' && window.gtag_report_conversion) {
-      window.gtag_report_conversion(telUrl);
+      window.gtag_report_conversion(dialUrl);
     } else {
-      window.location.href = telUrl;
+      window.location.href = dialUrl;
     }
   };
 

@@ -70,7 +70,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-18225923845');
+            gtag('config', 'AW-18225923845', {
+              'phone_conversion_number': '0757 653 6780'
+            });
           `
         }} />        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18225923845" />
         <script dangerouslySetInnerHTML={{
@@ -80,7 +82,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('js', new Date());
             gtag('config', 'AW-11284691642');
             gtag('config', 'AW-7570768229');
-            gtag('config', 'AW-18225923845');
+            gtag('config', 'AW-18225923845', {
+              'phone_conversion_number': '0757 653 6780'
+            });
 
             window.gtag_report_conversion = function(url) {
               var callback = function () {
