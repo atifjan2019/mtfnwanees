@@ -79,7 +79,14 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-18225923845', {
+            gtag('config', 'AW-18225923845');
+            // The CONVERSION LABEL is required, not optional. Configured against
+            // the bare tag id, gtag never requests a forwarding number at all --
+            // it silently makes no /wcm call, so the number is never swapped and
+            // Google records no website calls for this account. The label names
+            // WHICH call conversion action to allocate a number for; it comes
+            // from that action's own tag snippet in Google Ads.
+            gtag('config', 'AW-18225923845/bR4MCN3HjescEIWO5vJD', {
               'phone_conversion_number': '0757 653 6780'
             });
           `
@@ -91,7 +98,14 @@ export default function RootLayout({ children }) {
             gtag('js', new Date());
             gtag('config', 'AW-11284691642');
             gtag('config', 'AW-7570768229');
-            gtag('config', 'AW-18225923845', {
+            gtag('config', 'AW-18225923845');
+            // The CONVERSION LABEL is required, not optional. Configured against
+            // the bare tag id, gtag never requests a forwarding number at all --
+            // it silently makes no /wcm call, so the number is never swapped and
+            // Google records no website calls for this account. The label names
+            // WHICH call conversion action to allocate a number for; it comes
+            // from that action's own tag snippet in Google Ads.
+            gtag('config', 'AW-18225923845/bR4MCN3HjescEIWO5vJD', {
               'phone_conversion_number': '0757 653 6780'
             });
 
